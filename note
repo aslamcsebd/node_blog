@@ -1,4 +1,4 @@
-### Blogging syster(Nodejs)
+### Blogging system(Nodejs)
 - Signup, Login, CRUD, Image upload
 
 ## Functionality
@@ -18,3 +18,23 @@
 - comments(id, content, postId, usersId)
 
 - Build a REST API with NodeJs and MySQL
+
+npm list
+npm install name
+npm uninstall name
+
+nodemon
+sudo npm install -g nodemon [but package.json not record]
+npm install --save-dev nodemon
+npm install nodemon -D
+
+nodemon app.js
+
+[nodemon] app crashed - waiting for file changes before starting...
+
+sudo pkill -f node
+
+nodemon restart
+
+npx nodemon app.js
+
