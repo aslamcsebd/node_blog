@@ -1,0 +1,20 @@
+### Blogging syster(Nodejs)
+- Signup, Login, CRUD, Image upload
+
+## Functionality
+- CRUD, DB migrations, DB seeds, Data validation, Authentications (Token based), Image upload, Relationships
+
+## Deploy project
+- Google cloud platform
+
+## Folder structure
+- Routes, controllers, models, database
+- Express(nde framework), For ORM(Sequelize)
+
+## Database tables
+- users(id, name, email, password)
+- posts(id, title, content, image_url, categoryId, usersId)
+- categories(id, name)
+- comments(id, content, postId, usersId)
+
+- Build a REST API with NodeJs and MySQL
