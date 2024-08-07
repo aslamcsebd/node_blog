@@ -29,3 +29,8 @@
 
 - follow the Sequelize section (line 13-20)
 - db connect to config/config.json
+
+### [Inserting data to database](https://www.youtube.com/watch?v=rrwgTT2wVqw&list=PLG3j59vX4yLHA-wCw7KDP-i0r10ZrckqG&index=5&ab_channel=coderawesome)
+
+- npm install --save body-parser
+- postman: method(post) => localhost:3000/posts
