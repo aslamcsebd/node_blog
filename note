@@ -13,15 +13,17 @@
 
 ## Database tables
 - users(id, name, email, password)
-- posts(id, title, content, image_url, categoryId, usersId)
+- posts(id, title, content, image_url, categoryId, userId)
 - categories(id, name)
-- comments(id, content, postId, usersId)
+- comments(id, content, postId, userId)
 
 - Build a REST API with NodeJs and MySQL
 
 npm list
-npm install name
-npm uninstall name
+npm list -g
+sudo npm install name
+sudo npm uninstall name
+sudo npm uninstall -g name
 
 nodemon
 sudo npm install -g nodemon [but package.json not record]
