@@ -34,3 +34,11 @@
 
 - npm install --save body-parser
 - postman: method(post) => localhost:3000/posts
+
+### [Implement CRUD](https://www.youtube.com/watch?v=fp-ZaIFCqPU&list=PLG3j59vX4yLHA-wCw7KDP-i0r10ZrckqG&index=6&ab_channel=coderawesome)
+
+- router.post('/', postController.save);
+- router.get('/', postController.index);
+- router.get('/:id', postController.show);
+- router.patch('/:id', postController.update);
+- router.delete('/:id', postController.destroy);
