@@ -47,3 +47,9 @@
 
 - npm i fastest-validator
 - see (post.controller.js) page for validation code
+
+### [Authentication in NodeJS](https://www.youtube.com/watch?v=OfC8BrlEdtA&list=PLG3j59vX4yLHA-wCw7KDP-i0r10ZrckqG&index=8)
+
+- npm install --save bcryptjs
+- npm install --save jsonwebtoken
+- see (user.controller.js) page for authentication code

@@ -4,14 +4,17 @@
   "description": "- npm init - npm install --save express",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.2",
     "express": "^4.19.2",
     "fastest-validator": "^1.19.0",
+    "jsonwebtoken": "^9.0.2",
     "mysql2": "^3.11.0",
     "sequelize": "^6.37.3",
     "sequelize-cli": "^6.6.2"
