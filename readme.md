@@ -42,3 +42,8 @@
 - router.get('/:id', postController.show);
 - router.patch('/:id', postController.update);
 - router.delete('/:id', postController.destroy);
+
+### [Validate data in NodeJS](https://www.youtube.com/watch?v=XYQuGArOS3s&list=PLG3j59vX4yLHA-wCw7KDP-i0r10ZrckqG&index=7)
+
+- npm i fastest-validator
+- see (post.controller.js) page for validation code
