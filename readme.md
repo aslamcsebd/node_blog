@@ -53,3 +53,9 @@
 - npm install --save bcryptjs
 - npm install --save jsonwebtoken
 - see (user.controller.js) page for authentication code
+
+### [Protect Routes with Middleware in NodeJS](https://www.youtube.com/watch?v=9EyuLacWT0o&list=PLG3j59vX4yLHA-wCw7KDP-i0r10ZrckqG&index=9)
+
+- see middleware/check-auth.js page
+- update token from env [nodemon.json] [user controller, check-auth]
+- Collect bearer token from login api and send authorization / bearer token [add, update, delete api]
