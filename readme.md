@@ -59,3 +59,8 @@
 - see middleware/check-auth.js page
 - update token from env [nodemon.json] [user controller, check-auth]
 - Collect bearer token from login api and send authorization / bearer token [add, update, delete api]
+
+### [Implement Image Uploader in NodeJS](https://www.youtube.com/watch?v=aqgGGfARwYw&list=PLG3j59vX4yLHA-wCw7KDP-i0r10ZrckqG&index=10)
+
+- npm i --save multer
+- see code from (helpers/image-uploader.js, controller/image.controller.js, routers/images.js, app.js)

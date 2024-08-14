@@ -6,12 +6,14 @@ const bodyParser = require('body-parser');
 
 const postsRoute = require('./routers/posts');
 const userRoute = require('./routers/user');
+const imageRoute = require('./routers/images');
 
 app.use(bodyParser.json());
 
 // Route with prefix
 app.use('/posts', postsRoute);
 app.use('/user', userRoute);
+app.use('/images', imageRoute);
 
 // server run here
 const server = http.createServer(app);
