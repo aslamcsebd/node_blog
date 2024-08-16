@@ -9,6 +9,13 @@
 - sudo npm install -g nodemon [but package.json not record] or
 - npm install nodemon -D
 - nodemon app.js
+- package.json set bellow code then run [npm start]
+
+```
+    "scripts": {
+        "start": "nodemon app.js"
+    },
+```
 
 - DB ORM (Sequelize)
 - sequelize create this folder (config, migrations, models, seeders)
@@ -64,3 +71,16 @@
 
 - npm i --save multer
 - see code from (helpers/image-uploader.js, controller/image.controller.js, routers/images.js, app.js)
+
+### [Run Seeders with NodeJS and Sequelize](https://www.youtube.com/watch?v=OPqRXKLLM1I&list=PLG3j59vX4yLHA-wCw7KDP-i0r10ZrckqG&index=11)
+
+- npx sequelize seed:generate --name category-seeder
+- [see seeders folder code or click link](https://sequelize.org/docs/v6/other-topics/migrations/#creating-the-first-seed)
+- **Running Seeds**
+- npx sequelize db:seed --seed 20240815040504-category-seeder
+- npx sequelize db:seed:all
+
+- **Undoing Seeds**
+- npx sequelize db:seed:undo
+- npx sequelize db:seed:undo --seed name-of-seed-as-in-data
+- npx sequelize db:seed:undo:all
