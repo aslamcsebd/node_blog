@@ -72,7 +72,7 @@
 - npm i --save multer
 - see code from (helpers/image-uploader.js, controller/image.controller.js, routers/images.js, app.js)
 
-### [Run Seeders with NodeJS and Sequelize](https://www.youtube.com/watch?v=OPqRXKLLM1I&list=PLG3j59vX4yLHA-wCw7KDP-i0r10ZrckqG&index=11)
+### [Run Seeders with NodeJS from Sequelize](https://www.youtube.com/watch?v=OPqRXKLLM1I&list=PLG3j59vX4yLHA-wCw7KDP-i0r10ZrckqG&index=11)
 
 - npx sequelize seed:generate --name category-seeder
 - [see seeders folder code or click link](https://sequelize.org/docs/v6/other-topics/migrations/#creating-the-first-seed)
@@ -84,3 +84,58 @@
 - npx sequelize db:seed:undo
 - npx sequelize db:seed:undo --seed name-of-seed-as-in-data
 - npx sequelize db:seed:undo:all
+
+### [Faker install](https://fakerjs.dev/guide/)
+- npm install @faker-js/faker --save-dev
+- import { faker } from '@faker-js/faker';
+- const randomName = faker.person.fullName(); // Rowan Nikolaus
+- const randomEmail = faker.internet.email(); // Kassandra.Haley@erich.biz
+
+```
+Location folder: seeders/seed file[category-seeder.js]
+------------------------
+const { faker } = require('@faker-js/faker');
+
+const users = [...Array(20)].map((user) => (
+    {
+        name: faker.person.firstName(),
+        createdAt: new Date(),
+        updatedAt: new Date()
+    }
+))
+
+module.exports = {
+    async up (queryInterface, Sequelize) {    
+        await queryInterface.bulkInsert('Categories', users, {});
+    },
+
+    async down (queryInterface, Sequelize) {
+        await queryInterface.bulkDelete('Categories', null, {});
+    }
+};
+```
+
+#### Old way seeders
+```
+Location folder: seeders/seed file[category-seeder.js]
+module.exports = {
+    async up (queryInterface, Sequelize) {    
+        await queryInterface.bulkInsert('Categories', [
+            {
+                name: 'John Doe',
+                createdAt: new Date(),
+                updatedAt: new Date()
+            },
+            {
+                name: 'John Doe2',
+                createdAt: new Date(),
+                updatedAt: new Date()
+            }
+        ], {});
+    },
+
+    async down (queryInterface, Sequelize) {
+        await queryInterface.bulkDelete('Categories', null, {});
+    }
+};
+```

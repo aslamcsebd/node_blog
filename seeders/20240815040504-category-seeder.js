@@ -1,6 +1,25 @@
 'use strict';
+const { faker } = require('@faker-js/faker');
 
-/** @type {import('sequelize-cli').Migration} */
+const users = [...Array(20)].map((user) => (
+    {
+        name: faker.person.firstName(),
+        createdAt: new Date(),
+        updatedAt: new Date()
+    }
+))
+
+module.exports = {
+    async up (queryInterface, Sequelize) {    
+        await queryInterface.bulkInsert('Categories', users, {});
+    },
+
+    async down (queryInterface, Sequelize) {
+        await queryInterface.bulkDelete('Categories', null, {});
+    }
+};
+
+/*
 module.exports = {
     async up (queryInterface, Sequelize) {    
         await queryInterface.bulkInsert('Categories', [
@@ -17,7 +36,8 @@ module.exports = {
         ], {});
     },
 
-  async down (queryInterface, Sequelize) {
-    await queryInterface.bulkDelete('Categories', null, {});
-  }
+    async down (queryInterface, Sequelize) {
+        await queryInterface.bulkDelete('Categories', null, {});
+    }
 };
+*/
