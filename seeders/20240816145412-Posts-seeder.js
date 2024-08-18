@@ -1,7 +1,7 @@
 'use strict';
 const { faker } = require('@faker-js/faker');
 
-const all = [...Array(20)].map((type) => (
+const all = [...Array(10)].map((type) => (
     {
         title: faker.lorem.sentence(),
         content: faker.lorem.paragraph(),

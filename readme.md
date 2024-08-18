@@ -139,3 +139,5 @@ module.exports = {
     }
 };
 ```
+
+### [Sequelize Associations (hasOne, hasMany, belongsTo, belongsToMany)](https://www.youtube.com/watch?v=sN6Bv1EWI3w&list=PLG3j59vX4yLHA-wCw7KDP-i0r10ZrckqG&index=12)
